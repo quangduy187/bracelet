@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+            android:id="@+id/itCheck"
+            android:icon="@drawable/ic_placeholder"
+            android:title="Present Location"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/itRefresh"
+            android:icon="@drawable/ic_refresh"
+            android:title="Share"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/itSet"
+            android:icon="@drawable/ic_more_vert_black_24dp"
+            android:title="Bluetooth"
+            app:showAsAction="ifRoom">
+        <menu>
+            <item
+                    android:id="@+id/itConnect"
+                    android:title="Connect"
+                    app:showAsAction="ifRoom"/>
+
+            <item
+                    android:id="@+id/itDisConnect"
+                    android:title="Disconnect"
+                    app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="250dp"
+                      android:layout_marginTop="80dp"
+                      android:orientation="vertical"
+                      tools:ignore="UseCompoundDrawables">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:textSize="20sp"
+                      android:text="ON/OFF"/>
+
+            <ImageView android:layout_width="120dp"
+                         android:layout_gravity="center"
+                         android:id="@+id/btnOnOff"
+                         android:layout_marginTop="40dp"
+                         android:background="@drawable/ic_bracelet"
+                         android:layout_height="120dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:baselineAligned="false">
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          tools:ignore="NestedWeights">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/black"
+                          android:textSize="20sp"
+                          android:gravity="center"
+                          android:layout_gravity="center"
+                          android:text="Sound mode"/>
+                <ImageView android:layout_width="120dp"
+                           android:layout_marginStart="40dp"
+                           android:id="@+id/btnSound"
+                           android:layout_marginTop="50dp"
+                           android:background="@drawable/ic_sound_off"
+                           android:layout_height="120dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="vertical">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/black"
+                          android:textSize="20sp"
+                          android:layout_gravity="center"
+                          android:text="Vibrate mode"/>
+
+                <ImageView android:layout_width="120dp"
+                           android:layout_marginStart="40dp"
+                           android:id="@+id/btnVibrate"
+                           android:layout_marginTop="50dp"
+                           android:background="@drawable/vibrational_mode_off"
+                           android:layout_height="120dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fabmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="35dp"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="right|bottom"
+            app:menu_backgroundColor="@android:color/transparent"
+            app:menu_fab_label=""
+            app:menu_openDirection="up"
+            app:menu_showShadow="true"
+            app:menu_fab_size="mini">
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabConnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Connect Bluetooth"
+                android:src="@drawable/ic_bluetooth"
+                app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Location"
+                android:src="@drawable/ic_locker"
+                app:fab_size="mini"/>
+    </com.github.clans.fab.FloatingActionMenu>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
